@@ -1,8 +1,9 @@
 #ifndef OFDM
 #define OFDM
 
-#include "../include/fftw/fftw3.h"
-#include "../include/eigen/Dense"
+// #include "../include/fftw/fftw3.h"
+// #include "../include/eigen/Dense"
+#include <fftw3.h>
 #include <map>
 #include <random>
 #include <string>
