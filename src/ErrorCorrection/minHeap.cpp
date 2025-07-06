@@ -1,4 +1,4 @@
-#include "minHeap.h"
+#include "ErrorCorrection/minHeap.h"
 
 MinHeap::MinHeap() {}
 

@@ -3,7 +3,7 @@
 #include <cassert>
 #include <cmath>
 #include <complex>
-#include "../include/eigen/Dense"
+#include <eigen/Dense>
 #include <iostream>
 #include <map>
 #include <random>

@@ -8,11 +8,11 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include <eigen/Dense>
 
 #include "constellation.h"
 #include "ofdm.h"
 #include "ErrorCorrection/hammingCode.h"
-#include "../include/eigen/Dense"
 
 // -------------------- CSV 写文件函数 --------------------
 void write2DVectorToCSV(const std::vector<std::vector<double>>& data, const std::string& filename) {

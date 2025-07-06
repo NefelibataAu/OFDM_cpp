@@ -1,10 +1,10 @@
-#include "feedForwardTrellis.h"
+#include "ErrorCorrection/feedForwardTrellis.h"
 
 #include <algorithm>
 #include <cmath>
 #include <iostream>
 
-#include "../helper.h"
+#include "helper.h"
 
 namespace {
 int octToDec(int octal) {

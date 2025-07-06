@@ -1,7 +1,7 @@
-#include "viterbiCodec.h"
+#include "ErrorCorrection/viterbiCodec.h"
 
-#include "feedForwardTrellis.h"
-#include "minHeap.h"
+#include "ErrorCorrection/feedForwardTrellis.h"
+#include "ErrorCorrection/minHeap.h"
 #include <iostream>
 #include <cassert>
 

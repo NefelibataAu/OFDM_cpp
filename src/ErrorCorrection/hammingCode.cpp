@@ -1,4 +1,4 @@
-#include "hammingCode.h"
+#include "ErrorCorrection/hammingCode.h"
 #include <iostream>
 #include <cmath>
 #include <algorithm>

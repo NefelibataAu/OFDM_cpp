@@ -13,21 +13,18 @@ project(OFDM)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
-# add file
+# exe
 file(GLOB SOURCES "src/*.cpp")
 list(APPEND SOURCES "src/ErrorCorrection/hammingCode.cpp")
-
-# include_directories(/Applications/MATLAB_R2022b.app/extern/include)
-# include_directories(${CMAKE_SOURCE_DIR}/include)
-find_library(FFTW3_LIB fftw3 REQUIRED)
-find_package(Eigen3 3.3 REQUIRED NO_MODULE)
-
-# exe
 add_executable(ofdm ${SOURCES})
+
+# include
 target_include_directories(ofdm PRIVATE /usr/include)
+target_include_directories(ofdm PRIVATE /usr/ErrorCorrection)
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+find_library(FFTW3_LIB fftw3 REQUIRED)
+
 # lib
 target_link_libraries(ofdm PRIVATE ${FFTW3_LIB})
-# target_link_libraries(ofdm PRIVATE  ${CMAKE_SOURCE_DIR}/lib/libfftw3.dylib)
-# target_link_libraries(ofdm PRIVATE  /Applications/MATLAB_R2022b.app/bin/maci64/libmat.dylib)
-# target_link_libraries(ofdm PRIVATE  /Applications/MATLAB_R2022b.app/bin/maci64/libmx.dylib)
+
 
