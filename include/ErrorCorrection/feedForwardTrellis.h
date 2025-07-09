@@ -4,7 +4,7 @@
 
 #include <vector>
 #include "../helper.h"
-#include "viterbiCodec.h"
+#include "ErrorCorection/viterbiCodec.h"
 
 
 struct FeedForwardTrellis{

@@ -1,7 +1,7 @@
 #ifndef HAMMINGCODE_H
 #define HAMMINGCODE_H
 
-#include "../../include/eigen/Dense"
+#include <eigen/Dense>
 
 class HammingCode {
 public:

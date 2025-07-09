@@ -24,27 +24,29 @@ std::vector<std::complex<double>> Constellation::qpsk() {
 }
 
 std::vector<std::complex<double>> Constellation::qam(int levels) {
-  if (levels < 1 || levels % 2 != 0) {
+  
+  int sqrtLevels = static_cast<int>(std::sqrt(levels));
+  if( sqrtLevels * sqrtLevels != levels){
     std::cerr << "Invalid QAM level" << std::endl;
     return {};
   }
 
   std::vector<std::complex<double>> constl;
-  int sqrtLevels = static_cast<int>(std::sqrt(levels));
-  double stepSize = std::sqrt(8.0 / 5.0);
+  double stepSize = std::sqrt( 6 / (levels - 1) );
 
   for (int i = 0; i < sqrtLevels; ++i) {
     for (int j = 0; j < sqrtLevels; ++j) {
-      constl.push_back(std::complex<double>(-1.5 * stepSize + i * stepSize,
-                                            -1.5 * stepSize + j * stepSize));
+      double real = ( i - (sqrtLevels - 1) / 2.0 ) * stepSize;
+      double imag = ( j - (sqrtLevels - 1) / 2.0 ) * stepSize;
+      constl.push_back(real, imag);
     }
   }
 
   return constl;
 }
 
-double Constellation::calculateAverageBitEnergy(
-    const std::vector<std::complex<double>>& constellation) {
+double Constellation::calculateAverageBitEnergy(const std::vector<std::complex<double>>& constellation) {
+  
   // Get the number of symbols in the constellation
   int numSymbols = static_cast<int>(constellation.size());
 

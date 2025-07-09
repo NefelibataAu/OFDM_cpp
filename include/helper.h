@@ -26,6 +26,7 @@ class Helper{
     }
     }
 
+    // upper
     std::vector<int> convertIntToBits(int integer, int length) const {
       if (integer < 0) {
         std::cerr << "CANNOT CONVERT: negative integer" << std::endl;
