@@ -1,5 +1,5 @@
-#ifndef OFDM
-#define OFDM
+#ifndef OFDM_H
+#define OFDM_H
 
 // #include "../include/fftw/fftw3.h"
 // #include "../include/eigen/Dense"

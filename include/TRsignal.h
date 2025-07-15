@@ -3,9 +3,21 @@
 
 #include <vector>
 
-std::vector<int> TransmitSignal();
+class Signal{
 
-std::vector<float> ReceiveSignal();
+public:
+    
+    std::vector<int> signal;
+    int len;
+
+    Signal(std::vector<int>& signal) : signal(signal) { len = signal.size(); };
+
+
+private:
+
+
+};
+
 
 
 #endif
