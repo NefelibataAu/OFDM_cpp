@@ -10,16 +10,16 @@ public:
     
     std::vector<int> orignSrc;
     std::vector<int> encodeSrc;
-    std::vector<int> decodeSrc;
 
-    Encode(std::vector<int>& bits):orignSrc(bits){};
-    ~Encode(){};
+    EncodeSrc(std::vector<int>& bits) : orignSrc(bits), encodeSrc(){ };
+    ~EncodeSrc(){};
+
     void Huffman();
 
 
 private:
 
     
-}
+};
 
 #endif
