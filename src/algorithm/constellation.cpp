@@ -38,7 +38,7 @@ std::vector<std::complex<double>> Constellation::qam(int levels) {
     for (int j = 0; j < sqrtLevels; ++j) {
       double real = ( i - (sqrtLevels - 1) / 2.0 ) * stepSize;
       double imag = ( j - (sqrtLevels - 1) / 2.0 ) * stepSize;
-      constl.push_back(real, imag);
+      constl.push_back(std::complex<double>(real, imag));
     }
   }
 

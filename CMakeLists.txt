@@ -7,14 +7,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # project name
-project(OFDM)
+project(COMMUNICATION)
 
 # Append the -g flag to the compiler options
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
 # include
-include_directories(${CMAKE_SOURCE_POSTFIX} /inlcude)
+set(CMAKE_SOURCE_POSTFIX ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_POSTFIX}/include)
 
 # add_src
 add_subdirectory(src)

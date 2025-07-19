@@ -1,9 +1,10 @@
 #include <TRsignal.h>
+#include <utils.h>
 
 int main(){
 
-    std::vector<int> signal = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
+    std::vector<uint8_t> signal = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
     Signal transmit(signal);
-    transmit.printSignal();
+    printSignal(transmit.signal);
 
 }

@@ -1,20 +1,22 @@
+#include <vector>
+#include <cstdint>
+
 #ifndef ENCODESRE_H
 #define ENCODESRE_H
-
-#include  <vector>
-
 
 class EncodeSrc{
 
 public:
     
-    std::vector<int> orignSrc;
-    std::vector<int> encodeSrc;
+    std::vector<uint8_t> orignSrc;
+    std::vector<std::pair<uint8_t, uint8_t>> runencode;
+    // std::vector<uint8_t> encodeSrc;
 
-    EncodeSrc(std::vector<int>& bits) : orignSrc(bits), encodeSrc(){ };
+    EncodeSrc(std::vector<uint8_t>& bits) : orignSrc(bits), runencode(){ };
     ~EncodeSrc(){};
 
-    void Huffman();
+    // void Huffman();
+    void RunLengthEnocde();
 
 
 private:
